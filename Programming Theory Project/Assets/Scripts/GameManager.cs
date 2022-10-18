@@ -9,8 +9,10 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI nameText;
     public TextMeshProUGUI NameText { get => nameText; set => nameText = value; }
+    [SerializeField] private TextMeshProUGUI currentPlayerName;
     private void Awake()
     {
         Instance = this;
+        currentPlayerName.text = "Current Player Name: " + LoadScene.Instance.PlayerName;
     }
 }
