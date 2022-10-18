@@ -8,8 +8,4 @@ public class Sphere : Shapes
     {
         Name = "Sphere";
     }
-    protected override void DisplayText()
-    {
-        Debug.Log(Name);
-    }
 }

@@ -6,6 +6,8 @@ public abstract class Shapes : MonoBehaviour
 {
     private Camera mainCam;
     private const int MaxLength = 8;
+    private string colorName;
+
     private string _name = "Shape";
     public string Name
     {
@@ -36,11 +38,18 @@ public abstract class Shapes : MonoBehaviour
             {
                 if (hit.transform.name == Name)
                 {
+                    colorName = hit.transform.GetComponent<MeshRenderer>().material.name;                 
                     DisplayText();
                 }
             }
         }
     }
+    private void DisplayText()
+    {
+        GameManager.Instance.NameText.text = "Object name is: " + Name + " Color is: " + colorName;
+        Debug.Log(Name);
+        Debug.Log(colorName);
+    }
     protected abstract void SetName();
-    protected abstract void DisplayText();
+
 }

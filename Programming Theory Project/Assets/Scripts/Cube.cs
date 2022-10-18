@@ -8,8 +8,4 @@ public class Cube : Shapes
     {
         Name = "Cube";
     }
-    protected override void DisplayText()
-    {
-        Debug.Log(Name);
-    }
 }

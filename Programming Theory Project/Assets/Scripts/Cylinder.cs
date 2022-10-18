@@ -8,8 +8,4 @@ public class Cylinder : Shapes
     {
         Name = "Cylinder";
     }
-    protected override void DisplayText()
-    {
-        Debug.Log(Name);
-    }
 }
