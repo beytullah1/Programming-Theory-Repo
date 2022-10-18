@@ -5,6 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    //Capsulation
     public static GameManager Instance { get; private set; }
 
     [SerializeField] TextMeshProUGUI nameText;

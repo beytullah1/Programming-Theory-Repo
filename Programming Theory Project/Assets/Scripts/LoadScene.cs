@@ -6,6 +6,7 @@ using TMPro;
 
 public class LoadScene : MonoBehaviour
 {
+    //Capsulation
     public static LoadScene Instance { get; private set; }
     [SerializeField] private TMP_InputField nameInputField;
     public TMP_InputField NameInputField { get { return nameInputField; } }

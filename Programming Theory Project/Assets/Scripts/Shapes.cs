@@ -8,6 +8,7 @@ public abstract class Shapes : MonoBehaviour
     private const int MaxLength = 8;
     private string colorName;
 
+    //Capsulation
     private string _name = "Shape";
     public string Name
     {
@@ -27,9 +28,9 @@ public abstract class Shapes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MouseClickOnWorld();
+        MouseClickOnWorld();// ABSTRACTION
     }
-    private void MouseClickOnWorld()
+    private void MouseClickOnWorld()// ABSTRACTION
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -39,12 +40,12 @@ public abstract class Shapes : MonoBehaviour
                 if (hit.transform.name == Name)
                 {
                     colorName = hit.transform.GetComponent<MeshRenderer>().material.name;                 
-                    DisplayText();
+                    DisplayText();// ABSTRACTION
                 }
             }
         }
     }
-    private void DisplayText()
+    private void DisplayText()// ABSTRACTION
     {
         GameManager.Instance.NameText.text = "Object name is: " + Name + " Color is: " + colorName;
         Debug.Log(Name);
